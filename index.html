@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We'll Be Right Back</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #404040; /* 偏暖的中性灰 */
+      font-family: Arial, Helvetica, sans-serif;
+      width: 100%;
+      display: flex;
+      justify-content: center; /* 水平居中 stage */
+    }
+
+    .stage {
+      min-height: 100vh;
+      display: flex;
+      padding: 6vw;
+      gap: 6vw;
+      /* max-width: 1200px; */
+    }
+
+    /* 左侧 WBRB */
+    .wbrb {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      font-weight: 800;
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      line-height: 1.04;
+
+      color: #e3e9ce; /* 偏灰偏黄 */
+      text-shadow:
+        0.1ch 0.1ch 0 rgba(0, 0, 0, 1);
+    }
+
+    .wbrb span {
+      display: block;
+    }
+
+    /* 右侧文本 */
+    .content {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .explain {
+      max-width: 36rem;
+      font-size: clamp(1.0rem, 2.6vw, 1.2rem);
+      line-height: 1.6;
+
+      color: #dedbd2;
+    }
+
+    .explain p {
+      margin-bottom: 0.8em;
+    }
+
+    /* 移动端 */
+    @media (max-width: 768px) {
+      .stage {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .wbrb {
+        justify-content: flex-start;
+      }
+
+      .content {
+        align-items: flex-start;
+      }
+
+      .explain {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <div class="wbrb">
+      <span>We'll</span>
+      <span>Be</span>
+      <span>Right</span>
+      <span>Back</span>
+    </div>
+
+    <div class="content">
+      <div class="explain">
+        <p>感谢您光顾语痴博客！</p>
+        <p>由于原有服务器硬盘损坏，本人计划更换站点所在服务器，期间涉及到恢复和迁移数据库，致使本站暂时关停。
+          在您看到这个页面时，说明事情已经有所进展。我将会尽快将数据库恢复和迁移完成，并尽快让本站重新上线，
+          届时盼您再次光临。</p>
+        <p>其他服务也会一并迁移到新服务器。如果您曾授权访问这些服务，您可以直接尝试原有域名，但目前服务器的网
+          络状况并不佳，且近期晚上会停机降噪。</p>
+        <p>此页面用于占位，由我和ChatGPT共同编写，它被托管在绝大部分情况下都稳定可靠的GitHub Pages上，免受
+          任何物理宕机的影响。</p>
+        <p>(For English users) This is a Chinese site under maintainance used as my personal blog. 
+          You may ignore this notice and leave if you are not interested in Chinese blogs.
+        </p>
+        <p style="text-align: end;">—— rgzz666 @ 2025/12/30</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
